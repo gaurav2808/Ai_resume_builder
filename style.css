@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #2A5C82;
+    --secondary-color: #F5F7FA;
+    --accent-color: #32BEA6;
+    --text-dark: #2C3E50;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background:rgb(10, 10, 10);
+    min-height: 100vh;
+}
+
+/* Authentication Modal */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-card {
+    background: #1b1b1b;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card h2 {
+    color: #f1faee;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-input-group {
+    margin-bottom: 1.2rem;
+}
+
+.auth-card input{
+    color: white;
+}
+
+.auth-input {
+    width: 100%;
+    padding: 0.8rem;
+    border:1px solid #706f6f;
+    color: #000000;
+    border-radius: 0.5rem;
+    background-color: #1b1b1b;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: white;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+    background: #d00000;
+}
+
+/* Main Builder Container */
+.builder-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Input Section */
+.input-section {
+    flex: 1;
+    background: #1b1b1b;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    color: #f1faee;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid purple;
+}
+
+.form-group input {
+    margin-bottom: 1.2rem;
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.form-group textarea{
+        margin-bottom: 1.2rem;
+        background-color: #1b1b1b;
+        color: white;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color:pink;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color:#706f6f;
+    box-shadow: 0 0 0 3px rgba(42, 92, 130, 0.1);
+}
+
+.photo-upload {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.photo-preview {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid pink;
+    margin: 1rem auto;
+    display: none;
+}
+
+/* Resume Preview Section */
+.resume-preview {
+    flex: 1;
+    background:#1b1b1b;
+    padding: 2rem;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.resume-name {
+    color:#f1faee;
+    margin-bottom: 0.5rem;
+}
+
+.resume-contact {
+    color: #858282;
+    margin-bottom: 1rem;
+}
+
+.resume-section {
+    margin-bottom: 1.5rem;
+}
+
+.resume-section h3 {
+    color: pink;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid purple;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background:#d00000;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+.ai-badge {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-image: linear-gradient(to right,rgb(62, 62, 235) , rgb(24, 245, 245),rgb(253, 182, 194));
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+@media print {
+    .input-section, .auth-overlay, .ai-badge {
+        display: none !important;
+    }
+
+    .resume-preview {
+        box-shadow: none;
+        padding: 0;
+    }
+}
